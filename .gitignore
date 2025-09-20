@@ -1,0 +1,29 @@
+# Dependencias
+node_modules/
+
+# Archivos de build/cache
+.cache/
+dist/
+.next/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Backups temporales
+*.bak
+*.tmp
+
+# SQLite database lock (deja solo el .db real)
+*.db-journal
