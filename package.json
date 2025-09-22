@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "directus start",
-    "start": "npx directus bootstrap && npx directus start",
+    "start": "directus start",
     "dev": "directus start"
   },
   "keywords": [],
