@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "directus start",
-    "start": "directus start",
-    "dev": "directus start"
+    "build": "directus bootstrap",
+    "start": "chmod +x start.sh && ./start.sh",
+    "dev": "directus start",
+    "bootstrap": "directus bootstrap"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,7 @@
   "description": "Directus backend para Cervantes Bienes Raíces",
   "dependencies": {
     "directus": "^11.12.0",
-    "sqlite3": "^5.1.7"
+    "pg": "^8.11.3"
   },
   "engines": {
     "node": "22.x"
