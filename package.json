@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "directus bootstrap",
-    "start": "chmod +x start.sh && ./start.sh",
-    "dev": "directus start",
-    "bootstrap": "directus bootstrap"
+    "build": "directus start",
+    "start": "npx directus bootstrap && npx directus start",
+    "dev": "directus start"
   },
   "keywords": [],
   "author": "",
