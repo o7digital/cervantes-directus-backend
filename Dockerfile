@@ -13,8 +13,12 @@ RUN npm ci --omit=dev
 # Copia el resto del proyecto
 COPY . .
 
+# Make entrypoint executable
+RUN chmod +x entrypoint.sh
+
 # Expone el puerto (Railway usará $PORT)
 EXPOSE 8055
 
-# Arranca Directus
-CMD ["npx", "directus", "start"]
+# Usa entrypoint script
+ENTRYPOINT ["sh", "entrypoint.sh"]
+
