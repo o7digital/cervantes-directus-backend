@@ -1,8 +1,13 @@
 [build]
-builder = "NIXPACKS"
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
 
 [variables]
 NODE_VERSION = "22"
 
-[start]
-cmd = "cd cervantes-directus && npm run start"
+[deploy]
+startCommand = "sh entrypoint.sh"
+healthcheckPath = "/server/health"
+healthcheckTimeout = 60
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
