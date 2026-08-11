@@ -27,7 +27,8 @@ const client = new Client(clientConfig);
 
 const sql = `
   update directus_fields
-  set required = false
+  set required = false,
+      hidden = false
   where collection in ('propriedades', 'properties')
     and lower(replace(field, ' ', '_')) in ('cover_image', 'image');
 

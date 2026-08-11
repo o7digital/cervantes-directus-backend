@@ -2,7 +2,8 @@
 -- The field must be optional at creation time; users can add images later.
 
 update directus_fields
-set required = false
+set required = false,
+    hidden = false
 where collection in ('propriedades', 'properties')
   and lower(replace(field, ' ', '_')) in ('cover_image', 'image');
 
