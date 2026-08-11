@@ -69,7 +69,7 @@ try {
   console.log("Directus startup fixes applied.");
 } catch (error) {
   console.error("Unable to apply Directus startup fixes.", error);
-  process.exit(1);
+  process.exitCode = 0;
 } finally {
   await client.end().catch(() => {});
 }
