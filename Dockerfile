@@ -1,5 +1,5 @@
 # Usa Node 22 (Directus 11.12 lo requiere)
-FROM node:22-alpine
+FROM node:22-bookworm-slim
 
 # Define carpeta de trabajo
 WORKDIR /app
@@ -21,4 +21,3 @@ EXPOSE 8055
 
 # Usa entrypoint script
 ENTRYPOINT ["sh", "entrypoint.sh"]
-
